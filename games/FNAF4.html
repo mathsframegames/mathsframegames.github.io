@@ -514,72 +514,24 @@
                     </div>
                   </div>
                 </div>
-                <div class="text-area--content">
-                  <h2>About MathsFrame</h2>
-                  <p>
-                    Mathsframe offers over 300 unblocked games covering various
-                    subjects such as Math, Running, and Car... These resources
-                    are crafted by secondary school teachers from Haleyschool.
-                    Additionally, new games and applications are continuously
-                    being introduced to the platform.
-                  </p>
-                  <h2>
-                    <strong>FAQs about <span>MathsFrame</span>:</strong>
-                  </h2>
-                  <p>1. Does Mathsframe update games regularly?</p>
-                  <p>
-                    - Yes, of course. We are in the process of refining the
-                    website, and there will be many exciting games in the
-                    future.
-                  </p>
-                  <p>
-                    - Some games you shouldn't miss when visiting Mathsframe :
-                    <li><a href="https://drive-mad.app/" target="_blank">Drive Mad</a></li>
-                    <li>
-                      <a
-                        href="https://mathsframegames.github.io/games/bitlife.html"
-                        target="_blank"
-                        >BitLife</a
-                      >
-                    </li>
-
-                    <!-- Eggy Car game -->
-                    <li>
-                      <a
-                        href="https://mathsframegames.github.io/games/eggy-car.html"
-                        target="_blank"
-                        >Eggy Car</a
-                      >
-                    </li>
-
-                    <!-- 1v1.LOL game -->
-                    <li>
-                      <a
-                        href="https://mathsframegames.github.io/games/1v1-lol.html"
-                        target="_blank"
-                        >1v1.LOL</a
-                      >
-                    </li>
-                  </p>
-
-                  <p>2. Is mathsframe golf a golf game?</p>
-                  <p>- Yes, and it's very entertaining.</p>
-                  <p>
-                    - Here is the
-                    <a
-                      href="https://mathsframegames.github.io/games/golf-battle.html"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >link to this game</a
-                    >.
-                  </p>
-
-                  <p>3. Is mathsframe.github.io related to mathsframe.co.uk?</p>
-                  <p>
-                    - No! We are completely different. Here you can play games
-                    for free, and we have more games to play than they do.
-                  </p>
-                </div>
+                               <!-- text-content start -->
+                <div id="content-container"></div>
+                <script>
+                  fetch('content.html')
+                      .then(response => {
+                          if (!response.ok) {
+                              throw new Error('Network response was not ok');
+                          }
+                          return response.text();
+                      })
+                      .then(html => {
+                          document.getElementById('content-container').innerHTML = html;
+                      })
+                      .catch(error => {
+                          console.error('Error loading content:', error);
+                      });
+              </script>
+                <!-- text-content end -->
               </div>
             </div>
           </div>
